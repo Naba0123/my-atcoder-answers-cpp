@@ -6,6 +6,8 @@ using ll = long long;
 using vi = vector<int>;
 using vll = vector<ll>;
 
+#define MOD 1000000007
+
 int main() {
   int n;
   cin >> n;
