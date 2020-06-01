@@ -42,6 +42,18 @@ data.at(2).push_back(1); data.at(2).push_back(2); data.at(2).push_back(1);
 - 横の大きさ：data.at(i).size()
 - 初期値：int 0, string ""
 
+## map
+
+```c++
+map<string, int> primes;
+
+for (auto itr = primes.begin(); itr != primes.end(); itr++) {
+  itr->first;  // string
+  itr->second;  // int
+}
+```
+
+
 ## 参照
 
 ```c++
