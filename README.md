@@ -89,9 +89,31 @@ bool isPrime(int num)
 
 ## 円周率
 
-```
+```c++
 #include <bits/stdc++.h>
 M_PI
-または
+// または
 acos(-1)
+```
+
+## 幅優先探索（BFS）
+```C++
+vector<vi> tree(n, vi); // 初期化などはされているとする
+queue<int> now;  // 先頭をキューに追加
+vi ans(n, -1);
+ans[0] = 0;
+now.push(0);
+while (!now.empty())
+{
+  int _now = now.front();
+  now.pop();
+  rep(i, tree[_now].size())
+  {
+    if (ans[tree[_now][i]] == -1)
+    {
+      ans[tree[_now][i]] = _now;
+      now.push(tree[_now][i]);
+    }
+  }
+}
 ```
